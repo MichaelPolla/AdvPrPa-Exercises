@@ -20,12 +20,12 @@ def opAnd(a: Boolean, b: Boolean) =
 def opOr(a: Boolean, b: Boolean) =
   if (a) true else b
 
-opAnd(true, true)
-opAnd(true, false)
-opAnd(false, true)
-opAnd(false, false)
+opAnd(a = true, b = true)   // Returns true
+opAnd(a = true, b = false)  // Returns false
+opAnd(a = false, b = true)  // Returns false
+opAnd(a = false, b = false) // Returns false
 
-opOr(true, true)
-opOr(true, false)
-opOr(false, true)
-opOr(false, false)
+opOr(a = true, b = true)  // Returns true
+opOr(a = true, b = false) // Returns true
+opOr(a = false, b = true) // Returns true
+opOr(a = false, b = false)  // Returns false
