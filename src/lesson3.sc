@@ -1,5 +1,5 @@
 class Rational(n: Int, d: Int) {
-  require(d != 0)
+  require(d != 0, "denominator must be positive")
 
   // Auxiliary constructor
   def this(n: Int) = this(n, 1)
@@ -50,7 +50,7 @@ class Rational(n: Int, d: Int) {
     if(this.less(that)) that else this
   }
 
-  override def toString(): String = num + "/" + denom
+  override def toString: String = num + "/" + denom
 }
 
 object Rational { // Object companion
