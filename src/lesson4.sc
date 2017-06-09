@@ -1,6 +1,6 @@
 /** PATTERN MATCHING AND LISTS **/
 
-/** PATTERN MATCHING **/
+/**----- PATTERN MATCHING -----**/
 // Matching on Types examples (p.21) ------------------------------------------
 
 def typeMatch(x: Any) = {
@@ -47,7 +47,18 @@ patFoo('A')   // true
 patFoo('a')   // false
 patFoo(false) // true
 
-/** LISTS **/
+
+// Other example -------------------------------------------------------------
+def foo(x: Int) = {
+  x match {
+    case 1 => "one"
+    case 2 => "two"
+    case 3 | 4 => "many"
+    case _ => "other value"
+  }
+}
+
+/**----- LISTS -----**/
 // Useful functions listed at the end
 
 // Lists examples (p.33-34) ---------------------------------------------------
