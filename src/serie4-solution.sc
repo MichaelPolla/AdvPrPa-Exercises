@@ -1,5 +1,3 @@
-import scala.collection.immutable.Stream.Empty
-
 /** Serie 4 - Pattern matching & Lists **/
 
 // Question 1 - Working with expressions --------------------------------------
