@@ -38,8 +38,7 @@ list reduceLeft verboseMax
 
 def concat(a: Any, b: Int) = a + "-" + b
 // def concat(a: Any, b: Int) = a + "-" + b  ne marchera pas car Any
-// n'est pas une sous-classe de Int
-// //(on devrait faire un reduceRight)
+// n'est pas une sous-classe de Int(on devrait faire un reduceRight)
 list reduceLeft concat
 
 
@@ -48,7 +47,7 @@ list reduceLeft concat
 val list2 = List (1,2,3,4,5)
 list2.foldRight(0)((x, y) => x + y)
 
-// Ex2 p.22
+// Exercise 2 (p.23) ----------------------------------------------------------
 def length[A] (x : List[A]) : Int = {
   (x foldRight (0))((x:A, y:Int) => y + 1)
 }
@@ -58,20 +57,15 @@ def map[A, B] (x: List[A], f: A => B) : List[B] = {
   (x foldRight List.empty[B])((x:A, y: List[B]) => f(x)::y)
 }
 
-// A préférer (perso je trouve que ça évite les risques de parenthèses en
-// trop ou mal formées) :
-// x.foldRight(List.empty...
-
-
 val l4 = List(List(1), List(3,4))
-l4.flatten
+l4.flatten    // List(1, 3, 4)
 
 val l5 = List(1,2,3)
 val l6 = List(4,5,6)
-l5.zip(l6)
+l5.zip(l6)    // List((1,4), (2,5), (3,6))
 
 val l7 = List(3,4,5,2,2,5,6)
-l7.sortWith(_ < _) ///  affiche la liste par ordre croissant
+l7.sortWith(_ < _) // Order the list
 
 //p.26
 def dup[A](l: List[A]):List[A] = {
@@ -87,7 +81,7 @@ dup(List(1,2,3))
 dup2(List(1,2,3))
 dup3(List(1,2,3))
 
-// SUITE du 29.03)
+// SUITE du 29.03
 def merge(x : List[Int], y : List[Int]) : List[Int] = {
   (x, y) match {
     case (x, Nil) => x

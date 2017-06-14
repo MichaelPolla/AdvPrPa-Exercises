@@ -1,3 +1,5 @@
+/** Lesson 2 : Higher-order functions, recursion and curryism **/
+
 // Tail recursion (p.14-16) ---------------------------------------------------
 
 // First example : perform recursive calls until the end of recursion,
@@ -12,7 +14,7 @@ def tSum(x: Int, acc: Int) : Int = if (x == 0) acc else tSum(x-1, acc+x)
 sum(3)    // Returns 6
 tSum(3,0) // Returns 6
 
-// Partial application (p.36) --------------------------------------------------
+// Partial application (p.36) -------------------------------------------------
 
 def adder(x: Int, y: Int) = x + y
 val incr = adder(_: Int, 1)
@@ -22,7 +24,7 @@ incr(5) // Returns 6
 incr(5) // Returns 7
 
 
-// Currying (p.41)--------------------------------------------------------------
+// Currying (p.41)-------------------------------------------------------------
 
 def addNormal(a: Int, b: Int) = a + b
 def addOneAtATime(a: Int) = (b: Int) => a + b

@@ -1,5 +1,6 @@
-/*------------------------------------------------*/
-/* CBV vs CBN example (p. 82-83 of the course)    */
+/** Lesson 1 : Introduction to programming paradigms **/
+
+// CBV vs CBN example (p. 82-83 of the course) --------------------------------
 
 def first(x: Int, y: Int) = x
 def firstCBN(x: Int, y: => Int) = x
@@ -11,8 +12,7 @@ first(4, 5)
 firstCBN(4, loop) // return 4 ; loop is not evaluated, as it is not used.
 
 
-/*------------------------------------------------*/
-/* Defining && and || with an if statement (p.87) */
+// Defining && and || with an if statement (p.87) -----------------------------
 
 def opAnd(a: Boolean, b: Boolean) =
   if (a) b else false

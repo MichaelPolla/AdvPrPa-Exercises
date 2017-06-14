@@ -1,4 +1,4 @@
-/** PATTERN MATCHING AND LISTS **/
+/** Lesson 4 : PATTERN MATCHING AND LISTS **/
 
 /**----- PATTERN MATCHING -----**/
 // Matching on Types examples (p.21) ------------------------------------------

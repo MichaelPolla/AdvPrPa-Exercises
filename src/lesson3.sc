@@ -1,3 +1,5 @@
+/** Lesson 3 : Functional data structures **/
+
 class Rational(n: Int, d: Int) {
   require(d != 0, "denominator must be positive")
 
