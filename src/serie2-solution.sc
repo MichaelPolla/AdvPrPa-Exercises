@@ -15,7 +15,7 @@ def factTail(x: Int, acc: Int = 1) : Int = {
       factTail(x - 1, x * acc)
 }
 
-factTail(10)
+factTail(5)
 
 // b) Write two implementation of the Fibonacci function :
 // one with the definition provided in assignment, the other using tail recursion.
@@ -52,8 +52,9 @@ def sum(f: Int => Int, a: Int, b: Int) = {
   }
   iter(a, 0)
 }
-// Usage example
-sum(x => x + 2, 1, 4)
+// Usage examples
+sum(x => x, 0, 5) // Sum of numbers from 0 to 5
+sum(x => math.pow(x,2).toInt, 1, 4) // Sum of the square of numbers from 1 to 4
 
 // Question 3 : Currying ------------------------------------------------------
 
