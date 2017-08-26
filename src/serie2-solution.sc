@@ -1,3 +1,7 @@
+/**
+  * Serie 2 - Higher-order functions
+  */
+
 import scala.annotation.tailrec
 
 // Question 1 : Tail recursion ------------------------------------------------
@@ -27,22 +31,16 @@ fibo(10)
 // tail recursion version
 def fiboTail(x: Int) : Int = {
   @tailrec
-  def fib(n: Int, a: Int, b: Int) : Int = {
+  def fib(n: Int, a: Int = 0, b: Int = 1) : Int = {
     if (n == 0) a
     else fib(n-1, b, a+b)
   }
 
-  fib(x, 0, 1)
+  fib(x)
 }
 
 fiboTail(10)
 
-// another solution, with default arguments values
-@tailrec
-def fiboTail2(x: Int, a: Int = 0, b: Int = 1) : Int = {
-  if (x == 0) a
-  else fiboTail2(x-1, b, a + b)
-}
 
 // Question 2 : Higher-order functions ----------------------------------------
 
