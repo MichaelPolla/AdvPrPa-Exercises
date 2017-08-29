@@ -33,6 +33,6 @@ val c: Kelvin = Celsius(10)
 val d: Celsius = c
 val e: Temperature = d
 
-println(a)
-println(b)
-println(e)
+println(a) // 30.0 °C
+println(b) // 30.0 °F
+println(e) // 10.0 °C
